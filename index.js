@@ -48,7 +48,10 @@ function getPkgArgs(cwd, pkg) {
   };
 
   // 兼容之前的 build 配置
-  ['extractCSS', 'common', 'babel', 'uglify', 'hash', 'dest', 'less'].forEach(function(key) {
+  [
+    'extractCSS', 'common', 'babel', 'uglify', 'hash', 'dest', 'less',
+    'autoprefixer', 'umd'
+  ].forEach(function(key) {
     if (pkg.spm.hasOwnProperty(key)) {
       ret.build[key] = pkg.spm[key];
     }
