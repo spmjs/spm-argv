@@ -1,0 +1,22 @@
+{
+  "spm": {
+    "scripts": {
+      "prebuild": "less",
+      "postbuild": "csso"
+    },
+    "buildArgs": "--global jquery:jQuery",
+    "build": {
+      "global": {
+        "react": "React"
+      },
+      "babel": true
+    },
+    "uglify": {
+      "sourceMap": true
+    },
+    "server": {
+      "devtool": "eval"
+    },
+    "registry": "http://private.spm"
+  }
+}
