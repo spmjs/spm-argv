@@ -17,6 +17,7 @@
     "server": {
       "devtool": "eval"
     },
+    "pathmap": ["^src/(.*)", "$1"],
     "registry": "http://private.spm"
   }
 }

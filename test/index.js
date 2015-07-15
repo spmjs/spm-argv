@@ -12,6 +12,7 @@ describe('spm-argv', function() {
     ret.build.global.should.be.eql({react:'React'});
     ret.server.should.be.eql({devtool:'eval'});
     ret.build.uglify.should.be.eql({sourceMap:true});
+    ret.build.pathmap.should.be.eql(['^src/(.*)', '$1']);
   });
 
   it('no pkg', function() {
