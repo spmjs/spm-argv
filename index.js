@@ -44,13 +44,14 @@ function getPkgArgs(cwd, pkg) {
     registry: pkg.spm.registry,
     build: extend(buildArgs, pkg.spm.build),
     server: pkg.spm.server || {},
-    scripts: pkg.spm.scripts || {}
+    scripts: pkg.spm.scripts || {},
+    define: pkg.spm.define || {}
   };
 
   // 兼容之前的 build 配置
   [
     'extractCSS', 'common', 'babel', 'uglify', 'hash', 'dest', 'less',
-    'autoprefixer', 'umd', 'define', 'pathmap'
+    'autoprefixer', 'umd', 'pathmap'
   ].forEach(function(key) {
     if (pkg.spm.hasOwnProperty(key)) {
       ret.build[key] = pkg.spm[key];
