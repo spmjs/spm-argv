@@ -44,8 +44,7 @@ function getPkgArgs(cwd, pkg) {
     registry: pkg.spm.registry,
     build: extend(buildArgs, pkg.spm.build),
     server: pkg.spm.server || {},
-    scripts: pkg.spm.scripts || {},
-    define: pkg.spm.define || {}
+    scripts: pkg.spm.scripts || {}
   };
 
   // 兼容之前的 build 配置
