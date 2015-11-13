@@ -2,6 +2,10 @@
 
 ---
 
+## 0.2.0
+
+remove pathmap to compatible property list
+
 ## 0.1.2
 
 add pathmap to compatible property list
